@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Menu } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
+import { BsGear } from 'react-icons/bs';
+import { GiPlantRoots } from 'react-icons/gi';
 
 import logo from '../assets/logo.png';
 
@@ -44,7 +46,7 @@ const Sidebar = () => {
         </Menu.Item>
         <Menu.Item
           key="analysis"
-          icon={<HomeOutlined />}
+          icon={<GiPlantRoots />}
           onClick={() => handleItemClick('analysis')}
           onMouseEnter={() => handleMouseEnter('analysis')}
           onMouseLeave={handleMouseLeave}
@@ -57,7 +59,7 @@ const Sidebar = () => {
         </Menu.Item>
         <Menu.Item
           key="settings"
-          icon={<HomeOutlined />}
+          icon={<BsGear />}
           onClick={() => handleItemClick('settings')}
           onMouseEnter={() => handleMouseEnter('settings')}
           onMouseLeave={handleMouseLeave}

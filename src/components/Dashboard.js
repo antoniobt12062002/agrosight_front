@@ -1,7 +1,10 @@
 import React from 'react';
 import { Layout, Row, Col } from 'antd';
-import { UserOutlined, BellOutlined, FieldNumberOutlined, FireOutlined, DropboxOutlined, ExperimentOutlined, AlertOutlined, HomeOutlined } from '@ant-design/icons';
-
+import { UserOutlined, BellOutlined} from '@ant-design/icons';
+import {FaThermometerFull} from 'react-icons/fa';
+import {ImDroplet} from 'react-icons/im';
+import { MdScience } from 'react-icons/md';
+import { TbLetterN, TbLetterP, TbLetterK} from 'react-icons/tb';
 const { Header, Content } = Layout;
 
 const Dashboard = () => {
@@ -21,7 +24,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <FieldNumberOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <TbLetterN style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Nitrogênio</h3>
                 <p style={textStyle}>Quantidade: X</p>
@@ -30,7 +33,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <DropboxOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <TbLetterK style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Fósforo</h3>
                 <p style={textStyle}>Quantidade: Y</p>
@@ -39,7 +42,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <FireOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <TbLetterP style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Potássio</h3>
                 <p style={textStyle}>Quantidade: Z</p>
@@ -52,7 +55,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <ExperimentOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <MdScience style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>pH</h3>
                 <p style={textStyle}>Quantidade: V</p>
@@ -61,7 +64,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <AlertOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <FaThermometerFull style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Temperatura</h3>
                 <p style={textStyle}>Quantidade: T</p>
@@ -70,7 +73,7 @@ const Dashboard = () => {
             <Col span={8}>
               <div style={squareStyle}>
                 <div style={circleStyle}>
-                  <HomeOutlined style={{ fontSize: '24px', color: '#fff' }} />
+                  <ImDroplet style={{ fontSize: '24px', color: '#fff' }} />
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Umidade</h3>
                 <p style={textStyle}>Quantidade: U</p>
