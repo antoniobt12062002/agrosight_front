@@ -9,7 +9,7 @@ const { Sider, Content } = Layout;
 const App = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider theme="dark" width={200}>
+      <Sider theme="light" width={200}>
         <Sidebar />
       </Sider>
       <Layout>
