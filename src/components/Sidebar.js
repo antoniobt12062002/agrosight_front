@@ -3,7 +3,8 @@ import { Menu } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
 import { BsGear } from 'react-icons/bs';
 import { GiPlantRoots } from 'react-icons/gi';
-import WeatherWidget from './WeatherWidget'; // Importe o componente WeatherWidget aqui
+import { RiSeedlingFill } from 'react-icons/ri';
+import WeatherWidget from './WeatherWidget';
 import '../components/sidebar.css';
 
 const Sidebar = () => {
@@ -14,11 +15,27 @@ const Sidebar = () => {
   };
 
   return (
-    <div style={{ background: '#73af4b', height: '100vh', width: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div
+      style={{
+        background: '#73af4b',
+        height: '100vh',
+        width: '200px',
+        position: 'fixed',
+        left: '0',
+        top: '0',
+        overflowY: 'auto',
+      }}
+    >
       <div>
-      <div style={{ padding: '26px', textAlign: 'left' }}>
-        <WeatherWidget /> {/* Adicione o componente WeatherWidget aqui */}
-      </div>
+        <div style={{ padding: '26px', textAlign: 'left' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <RiSeedlingFill style={{ fontSize: '20px', color: '#fff', marginRight: '8px' }} />
+            <span style={{ color: '#fff', fontSize: '16px', fontWeight: 'bold' }}>AgroSight</span>
+          </div>
+        </div>
+        <div style={{ padding: '26px', textAlign: 'left' }}>
+          <WeatherWidget />
+        </div>
         <Menu theme="light" mode="inline" style={{ background: '#73af4b', marginTop: '16px' }}>
           <Menu.Item
             key="dashboard"
@@ -26,7 +43,7 @@ const Sidebar = () => {
             onClick={() => handleItemClick('dashboard')}
             style={{
               background: selectedItem === 'dashboard' ? '#6ca547' : '',
-              borderRadius: '0'
+              borderRadius: '0',
             }}
           >
             {selectedItem === 'dashboard' && <span className="selected-indicator" />}
@@ -38,7 +55,7 @@ const Sidebar = () => {
             onClick={() => handleItemClick('analysis')}
             style={{
               background: selectedItem === 'analysis' ? '#6ca547' : '',
-              borderRadius: '0'
+              borderRadius: '0',
             }}
           >
             {selectedItem === 'analysis' && <span className="selected-indicator" />}
@@ -50,7 +67,7 @@ const Sidebar = () => {
             onClick={() => handleItemClick('settings')}
             style={{
               background: selectedItem === 'settings' ? '#6ca547' : '',
-              borderRadius: '0'
+              borderRadius: '0',
             }}
           >
             {selectedItem === 'settings' && <span className="selected-indicator" />}

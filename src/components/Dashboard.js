@@ -1,10 +1,12 @@
 import React from 'react';
 import { Layout, Row, Col } from 'antd';
-import { UserOutlined, BellOutlined} from '@ant-design/icons';
-import {FaThermometerFull} from 'react-icons/fa';
-import {ImDroplet} from 'react-icons/im';
+import { UserOutlined, BellOutlined } from '@ant-design/icons';
+import { FaThermometerFull } from 'react-icons/fa';
+import { ImDroplet } from 'react-icons/im';
 import { MdScience } from 'react-icons/md';
-import { TbLetterN, TbLetterP, TbLetterK} from 'react-icons/tb';
+import Grafico from './Grafico';
+import { TbLetterN, TbLetterP, TbLetterK } from 'react-icons/tb';
+
 const { Header, Content } = Layout;
 
 const Dashboard = () => {
@@ -77,6 +79,15 @@ const Dashboard = () => {
                 </div>
                 <h3 style={{ ...textStyle, color: '#73af4b' }}>Umidade</h3>
                 <p style={textStyle}>Quantidade: U</p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <div style={{ marginBottom: '24px' }}>
+          <Row gutter={[24, 24]}>
+            <Col span={24}>
+              <div style={squareStyle}>
+                <Grafico />
               </div>
             </Col>
           </Row>
