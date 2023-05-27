@@ -3,74 +3,64 @@ import { Menu } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
 import { BsGear } from 'react-icons/bs';
 import { GiPlantRoots } from 'react-icons/gi';
-
-import logo from '../assets/logo.png';
+import WeatherWidget from './WeatherWidget'; // Importe o componente WeatherWidget aqui
+import '../components/sidebar.css';
 
 const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useState('dashboard');
-  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
 
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
-
   return (
-    <div style={{ background: '#fff', height: '100vh', width: '200px' }}>
-      <div style={{ textAlign: 'center', padding: '16px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', marginBottom: '16px' }}>
-          <img src={logo} alt="Logo AgroSight" style={{ width: '20%', maxWidth: '100px', marginBottom: '8px' }} />
-          <h3 style={{ color: '#73af4b', fontSize: '14px', margin: 0 }}>AgroSight</h3>
-        </div>
+    <div style={{ background: '#73af4b', height: '100vh', width: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <div>
+      <div style={{ padding: '26px', textAlign: 'left' }}>
+        <WeatherWidget /> {/* Adicione o componente WeatherWidget aqui */}
       </div>
-      <Menu theme="light" mode="inline">
-        <Menu.Item
-          key="dashboard"
-          icon={<HomeOutlined />}
-          onClick={() => handleItemClick('dashboard')}
-          onMouseEnter={() => handleMouseEnter('dashboard')}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            color: hoveredItem === 'dashboard' || selectedItem === 'dashboard' ? '#73af4b' : '',
-            background: selectedItem === 'dashboard' ? '#f0f0f0 ' : ''
-          }}
-        >
-          Dashboard
-        </Menu.Item>
-        <Menu.Item
-          key="analysis"
-          icon={<GiPlantRoots />}
-          onClick={() => handleItemClick('analysis')}
-          onMouseEnter={() => handleMouseEnter('analysis')}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            color: hoveredItem === 'analysis' || selectedItem === 'analysis' ? '#73af4b' : '',
-            background: selectedItem === 'analysis' ? '#f0f0f0' : ''
-          }}
-        >
-          Análise de Solo
-        </Menu.Item>
-        <Menu.Item
-          key="settings"
-          icon={<BsGear />}
-          onClick={() => handleItemClick('settings')}
-          onMouseEnter={() => handleMouseEnter('settings')}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            color: hoveredItem === 'settings' || selectedItem === 'settings' ? '#73af4b' : '',
-            background: selectedItem === 'settings' ? '#fff' : ''
-          }}
-        >
-          Configuração
-        </Menu.Item>
-      </Menu>
+        <Menu theme="light" mode="inline" style={{ background: '#73af4b', marginTop: '16px' }}>
+          <Menu.Item
+            key="dashboard"
+            icon={<HomeOutlined style={{ color: '#fff' }} />}
+            onClick={() => handleItemClick('dashboard')}
+            style={{
+              background: selectedItem === 'dashboard' ? '#6ca547' : '',
+              borderRadius: '0'
+            }}
+          >
+            {selectedItem === 'dashboard' && <span className="selected-indicator" />}
+            <span style={{ color: '#fff' }}>Dashboard</span>
+          </Menu.Item>
+          <Menu.Item
+            key="analysis"
+            icon={<GiPlantRoots style={{ color: '#fff' }} />}
+            onClick={() => handleItemClick('analysis')}
+            style={{
+              background: selectedItem === 'analysis' ? '#6ca547' : '',
+              borderRadius: '0'
+            }}
+          >
+            {selectedItem === 'analysis' && <span className="selected-indicator" />}
+            <span style={{ color: '#fff' }}>Análise de Solo</span>
+          </Menu.Item>
+          <Menu.Item
+            key="settings"
+            icon={<BsGear style={{ color: '#fff' }} />}
+            onClick={() => handleItemClick('settings')}
+            style={{
+              background: selectedItem === 'settings' ? '#6ca547' : '',
+              borderRadius: '0'
+            }}
+          >
+            {selectedItem === 'settings' && <span className="selected-indicator" />}
+            <span style={{ color: '#fff' }}>Configuração</span>
+          </Menu.Item>
+        </Menu>
+      </div>
+      <div style={{ padding: '26px', textAlign: 'left' }}>
+        <span style={{ color: '#fff', cursor: 'pointer' }}>Sair</span>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.selected-indicator {
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }

@@ -10,7 +10,7 @@ const { Header, Content } = Layout;
 const Dashboard = () => {
   return (
     <Layout>
-      <Header style={{ background: '#fff', padding: '0 16px', display: 'flex', justifyContent: 'flex-end' }}>
+      <Header style={{ background: '#f5f5f5', padding: '0 16px', display: 'flex', justifyContent: 'flex-end' }}>
         <div style={{ marginRight: '16px' }}>
           <BellOutlined style={{ fontSize: '14px', color: '#73af4b' }} />
         </div>

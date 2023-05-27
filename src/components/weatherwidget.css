@@ -1,0 +1,29 @@
+.weather-widget {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .weather-icon {
+    margin-right: 10px;
+  }
+  
+  .weather-icon img {
+    width: 40px;
+  }
+  
+  .weather-info {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .temperature {
+    font-weight: bold;
+  }
+  
+  .description {
+    margin-top: 5px;
+  }
+  
