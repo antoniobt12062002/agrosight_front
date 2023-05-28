@@ -15,7 +15,7 @@ const WeatherWidget = () => {
   const fetchWeatherData = async () => {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=-24.046&lon=-52.3838&appid=c8dda9e715f8d44ee66b010980fb863b&units=metric&lang=pt_br`
+        `https://api.openweathermap.org/data/2.5/weather?lat=-24.046&lon=-52.3838&appid=&units=metric&lang=pt_br`
       );
       const { name, main, weather } = response.data;
       setLocation(name);
