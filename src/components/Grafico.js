@@ -78,21 +78,23 @@ const data = [
 
 const Grafico = () => {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <LineChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="nitrogenio" stroke="#73af4b" name="Nitrogênio" />
-        <Line type="monotone" dataKey="fosforo" stroke="#73af4b" name="Fósforo" />
-        <Line type="monotone" dataKey="potassio" stroke="#73af4b" name="Potássio" />
-        <Line type="monotone" dataKey="ph" stroke="#73af4b" name="pH" />
-        <Line type="monotone" dataKey="temperatura" stroke="#73af4b" name="Temperatura" />
-        <Line type="monotone" dataKey="umidade" stroke="#73af4b" name="Umidade" />
-      </LineChart>
-    </ResponsiveContainer>
+    <div style={{ width: '100%', height: '300px' }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="nitrogenio" stroke="#73af4b" name="Nitrogênio" />
+          <Line type="monotone" dataKey="fosforo" stroke="#73af4b" name="Fósforo" />
+          <Line type="monotone" dataKey="potassio" stroke="#73af4b" name="Potássio" />
+          <Line type="monotone" dataKey="ph" stroke="#73af4b" name="pH" />
+          <Line type="monotone" dataKey="temperatura" stroke="#73af4b" name="Temperatura" />
+          <Line type="monotone" dataKey="umidade" stroke="#73af4b" name="Umidade" />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
