@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from 'antd';
-import './App.css';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import './App';
+import Sidebar from '../resources/components/Sidebar';
+import Dashboard from '../resources/components/Dashboard';
 
 const { Sider, Content } = Layout;
 

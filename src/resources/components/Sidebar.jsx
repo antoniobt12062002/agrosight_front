@@ -5,7 +5,7 @@ import { BsGear } from 'react-icons/bs';
 import { GiPlantRoots } from 'react-icons/gi';
 import { RiSeedlingFill } from 'react-icons/ri';
 import WeatherWidget from './WeatherWidget';
-import '../components/sidebar.css';
+import './sidebar.css';
 
 const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useState('dashboard');
